@@ -2,7 +2,6 @@
 
 ## Spring Security
 
-##### MyBatis
-
-###### Links:
+## MyBatis
+Links:
 1. [Many-To-Many](https://programmer.group/mapping-and-query-of-many-to-many-relations-in-mybatis.html)
