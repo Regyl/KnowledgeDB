@@ -9,8 +9,7 @@
   graph TD;
       Hardware --> Virt-API;
       Virt-API --> KVM;
-      B-->D;
-      C-->D;
+      X11 --> KVM;
 ```
 
 ###### Requires:
