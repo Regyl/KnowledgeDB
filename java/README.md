@@ -4,6 +4,7 @@
 1. Early/lately binding
 1. Многопотока, параллелизм
 1. assert
+2. annotations
 
 
 ## Type casting
