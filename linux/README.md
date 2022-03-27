@@ -7,8 +7,8 @@
 
 ```mermaid
   graph TD;
-      Hardware <-- Virt-API;
-      Virt-API <-- KVM;
+      Virt-API --> Hardware;
+      KVM --> Virt-API;
       X11 --> KVM;
 ```
 
