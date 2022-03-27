@@ -28,3 +28,4 @@
 
 ### Backup process:
 1. [Link 1](https://schh.medium.com/backup-and-restore-kvm-vms-21c049e707c1)
+2. [Ready script](https://nixlab.org/blog/backup-kvm-virtual-machines)
