@@ -7,8 +7,8 @@
 
 ```mermaid
   graph TD;
-      Virt-API --> Hardware;
-      KVM --> Virt-API;
+      Virtualization-API --> Hardware-Support;
+      KVM --> Virtualization-API;
       X11 --> KVM;
       Putty --> X11;
       Windows-User --> Putty;
