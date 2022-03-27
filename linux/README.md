@@ -10,6 +10,8 @@
       Virt-API --> Hardware;
       KVM --> Virt-API;
       X11 --> KVM;
+      Putty (i.e.) --> X11;
+      User --> Putty (i.e.);
 ```
 
 ###### Requires:
