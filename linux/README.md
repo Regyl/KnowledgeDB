@@ -26,3 +26,5 @@
 - [(RU) Backup principles](https://docs.ispsystem.ru/vmmanager-kvm/rezervnoe-kopirovanie/printsipy-rezervnogo-kopirovaniya)
 
 
+### Backup process:
+1. [Link 1](https://schh.medium.com/backup-and-restore-kvm-vms-21c049e707c1)
