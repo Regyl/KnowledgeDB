@@ -1,5 +1,6 @@
 # Methods
-1. Put
+1. Put - full replace data
+2. Patch - partionally replace data
 
 # MediaTypes
 ***Basic information***: 
