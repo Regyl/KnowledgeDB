@@ -9,5 +9,5 @@
   ````
   1.2 Connect
   ````
-  docker exec -it <id> psql -U postgres -d database
+  docker exec -it <id> psql -U <username> -d <database>
   ````
