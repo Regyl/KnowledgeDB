@@ -4,5 +4,10 @@
 
 # MediaTypes
 ***Basic information***: 
+```
+type/subtype;parameter=value (i.e. application/json;charset=UTF-8)
+```
+###### References:
+1. [RU Mozilla](https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
 1. application/octet-stream - byte array stream
