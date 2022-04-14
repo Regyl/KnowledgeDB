@@ -24,8 +24,9 @@ exchanges symmetrical key and further use only them.
 
 
 ## Type [Strength]
-There are t
+There are two types:
 1. Absolutely strong
+2. Enough strong
 
 ## Best known
 1. Asymmetrical
