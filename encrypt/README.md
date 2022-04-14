@@ -37,8 +37,8 @@ There are two types:
 2. Symmetrical
    1. AES - Advanced Encryption Standard
    2. DES - Data Encryption Standard
-
-## Uses approaches
+   
+## Used approaches
 1. ***Avalanche effect*** - little changes on input lead to *avalanche* changes on output.
 2. Cipher
    1. ***Block cipher*** - symmetrical cipher, which operating on fixed-length groups of bits, called blocks.
