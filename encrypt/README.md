@@ -38,7 +38,14 @@ There are two types:
    1. AES - Advanced Encryption Standard
    2. DES - Data Encryption Standard
 
+## Uses approaches
+1. ***Avalanche effect*** -
+2. Cipher
+   1. ***Block cipher*** - symmetrical cipher, which operating on fixed-length groups of bits, called blocks.
+   2. ***Stream cipher*** - symmetrical cipher, which encrypts each byte (symbol) according to key and symbol place in text.
+
 
 ## Links
 1. [RU Asymmetrical](https://encyclopedia.kaspersky.ru/glossary/asymmetric-encryption/) - [Type [Methods]](#Type-[Methods])
 2. [RU Basics](https://habr.com/ru/post/449552/) - only basics, the rest of info so *weak*.
+3. [RU Avalanche](https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B2%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9_%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82)
