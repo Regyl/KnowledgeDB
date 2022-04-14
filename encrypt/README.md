@@ -38,7 +38,7 @@ There are two types:
    1. AES - Advanced Encryption Standard
    2. DES - Data Encryption Standard
 
-## Uses approaches
+## Used approaches
 1. ***Avalanche effect*** -
 2. Cipher
    1. ***Block cipher*** - symmetrical cipher, which operating on fixed-length groups of bits, called blocks.
