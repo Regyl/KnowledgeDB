@@ -1,5 +1,8 @@
+#Introduction
+
+
 # Recommendations:
-1. thread count = 4 in IntelliJ settings
+1. Thread count = 4 in IntelliJ settings
 
 # Build phases
 1. validate
