@@ -39,7 +39,7 @@ There are two types:
    2. DES - Data Encryption Standard
 
 ## Uses approaches
-1. ***Avalanche effect*** -
+1. ***Avalanche effect*** - little changes on input lead to *avalanche* changes on output.
 2. Cipher
    1. ***Block cipher*** - symmetrical cipher, which operating on fixed-length groups of bits, called blocks.
    2. ***Stream cipher*** - symmetrical cipher, which encrypts each byte (symbol) according to key and symbol place in text.
