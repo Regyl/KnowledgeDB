@@ -1,9 +1,19 @@
 # Protocols
-1. SSH - Secure Shell protocol
-2. SSL/TLS - Secure Sockets Layer/Transport Layer Security
-3. TCP/IP - Transmission Control protocol
-4. UDP - User Datagram Protocol
-5. FTP - File Transfer Protocol
+1. [SSH](#SSH) - Secure Shell protocol
+2. [SSL](#SSL) / [TLS](#TLS) - Secure Sockets Layer/Transport Layer Security
+3. [TCP](#TCP) / [IP](#IP) - Transmission Control protocol/Internet Protocol
+4. [UDP](#UDP) - User Datagram Protocol
+5. [FTP](#FTP) - File Transfer Protocol
+6. [LDAP](#LDAP) - Lightweight Directory Access Protocol
+
+## SSH
+## SSL
+## TLS
+## TCP
+## IP
+## UDP
+## FTP
+## LDAP
 
 # HTTP
 
