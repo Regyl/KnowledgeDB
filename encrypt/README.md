@@ -20,6 +20,8 @@ In contrast to asymmetrical algorithms, they have bigger performance.
 For example, SSL/TLS uses *asymmetrical on handshake stage*, 
 exchanges symmetrical key and further use only them.
 
+![img.png](img.png)
+
 
 ## Type [Strength]
 There are t
@@ -37,5 +39,5 @@ There are t
 
 
 ## Links
-1. [RU Asymmetrical](https://encyclopedia.kaspersky.ru/glossary/asymmetric-encryption/) - [Type](#Type-[Methods])
+1. [RU Asymmetrical](https://encyclopedia.kaspersky.ru/glossary/asymmetric-encryption/) - [Type [Methods]](#Type-[Methods])
 2. [RU Basics](https://habr.com/ru/post/449552/) - only basics, the rest of info so *weak*.
