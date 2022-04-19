@@ -14,10 +14,10 @@
 ## Spring Core
 
 ### Dependency Injection (DI)
-[***Related to***]()
+[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#dependency-injection-di)
 
 #### Inversion of Control (IoC)
-[***Related to***]()
+[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#inversion-of-control-ioc)
 
 ## Spring Web
 
