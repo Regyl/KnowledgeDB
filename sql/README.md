@@ -47,7 +47,7 @@ avoid update/insertion/deletion anomalies
 ### 6NF
 
 ### Algorithms
-If you're from RUT MIIT - [u could text me](t.me/corgidile)
+If you're from RUT MIIT - [u could text me](http://t.me/corgidile)
 
 #### Ronald Fagin
 ***Алгоритм Фэджина***
