@@ -10,6 +10,10 @@
    4. [4НФ](#4nf)
    5. [5НФ](#5nf)
    6. [6НФ](#6nf)
+   7. [Algorithms](#algorithms)
+      1. [Фэджина](#ronald-fagin)
+      2. [Делобеля-Кейси](#delobel-casey)
+      3. [Бернштейна](#ethan-bernstein)
 
 ## Definitions
 - Attribute - column/field
@@ -43,8 +47,15 @@ avoid update/insertion/deletion anomalies
 ### 6NF
 
 ### Algorithms
-If you're from RUT MIIT - [text me](t.me/corgidile)
-#### 
+If you're from RUT MIIT - [u could text me](t.me/corgidile)
+
+#### Ronald Fagin
 ***Алгоритм Фэджина***
+
+#### Delobel-Casey
+***Алгоритм Делобеля-Кейси***
+#### Ethan Bernstein
+***Алгоритм Бернштейна***
+
 ### Links
 1. [(RU) Habr](https://habr.com/ru/post/254773/) - Нормализация отношений. Шесть нормальных форм
