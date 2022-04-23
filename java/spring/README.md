@@ -5,12 +5,10 @@
    1. [DI](#dependency-injection-di)
       1. [IoC](#inversion-of-control-ioc)
    2. [Annotations](#annotations)
-2. [Spring Web](#Spring-web)
-3. [Spring Security](#spring-security)
-4. [Spring Data](#spring-data)
-   1. [JPA](#spring-data-jpa)
-   2. [JDBC](#spring-data-jdbc)
-5. [Spring Cloud]()
+2. [Spring Web](#)
+3. [Spring Security](#)
+4. [Spring Data](#)
+5. [Spring Cloud](#)
 
 ## Spring Core
 
@@ -40,12 +38,3 @@ Links
 #### Inversion of Control (IoC)
 [***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#inversion-of-control-ioc)
 
-## Spring Web
-
-## Spring Security
-
-## Spring Data
-
-### Spring Data JPA
-
-### Spring Data JDBC
