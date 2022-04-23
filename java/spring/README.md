@@ -10,7 +10,7 @@
 4. [Spring Data](#spring-data)
    1. [JPA](#spring-data-jpa)
    2. [JDBC](#spring-data-jdbc)
-5. [Languages](#languages)
+5. [Spring Cloud]()
 
 ## Spring Core
 
@@ -49,8 +49,3 @@ Links
 ### Spring Data JPA
 
 ### Spring Data JDBC
-
-### Languages
-1. Kotlin
-2. Groovy
-3. Dynamic languages
