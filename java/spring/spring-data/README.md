@@ -8,4 +8,6 @@
 
 ### Spring Data JPA
 
+- [Projections](https://www.baeldung.com/spring-data-jpa-projections)
+
 ### Spring Data JDBC
