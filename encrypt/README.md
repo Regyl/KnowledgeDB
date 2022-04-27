@@ -14,10 +14,11 @@ or a pair of keys (asymmetrical), where the first named *private* and uses for d
 and the second - *public* - uses for encryption.
 1. ***Symmetrical***
 2. ***Asymmetrical***
+3. ***Hybrid*** - asymmetrical method for symmetrical key exchange
 
 Despite all this, symmetrical keys are still used. 
 In contrast to asymmetrical algorithms, they have bigger performance.  
-For example, SSL/TLS uses *asymmetrical on handshake stage*, 
+Frequently used hybrid encryption method. For example, SSL/TLS uses *asymmetrical on handshake stage*, 
 exchanges symmetrical key and further use only them.
 
 ![img.png](img.png)
