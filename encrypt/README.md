@@ -3,8 +3,6 @@
 into unavailable for understanding form.  
 - ***Decryption*** as u may guess, is a reverse operation.
 
-[Related to]()
-
 ## Content:
 1. [Type by encryption methods](#Type-[Methods])
 2. [Type by encryption strength](#Type-[Strength])
@@ -16,7 +14,7 @@ or a pair of keys (asymmetrical), where the first named *private* and uses for d
 and the second - *public* - uses for encryption.
 1. ***Symmetrical***
 2. ***Asymmetrical***
-3. ***Hybrid*** - asymmetrical method for symmetrical key exchange
+3. ***Hybrid*** - asymmetrical method for symmetrical key exchange. Usually use [KEM](https://en.wikipedia.org/wiki/Key_encapsulation_mechanism) - key encapsulation mechanism for symmetric key transition.
 
 Despite all this, symmetrical keys are still used. 
 In contrast to asymmetrical algorithms, they have bigger performance.  
