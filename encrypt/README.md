@@ -3,6 +3,8 @@
 into unavailable for understanding form.  
 - ***Decryption*** as u may guess, is a reverse operation.
 
+[Related to]()
+
 ## Content:
 1. [Type by encryption methods](#Type-[Methods])
 2. [Type by encryption strength](#Type-[Strength])
