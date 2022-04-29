@@ -5,10 +5,19 @@
 4. Многопоточка, параллелизм
 5. annotations
 
-## Content
-1. [JCF](#1.-Java-Collections-Framework-(JCF))
-2. [Nested classes](#2.-Nested-classes)
-3. [Unclassified](#Unclassified)
+# Content
+1. [JDK](#jdk)
+   1. [JEP](#jep) - JDK Enhancement Proposal
+2. [JCF](#1.-Java-Collections-Framework-(JCF))
+3. [Nested classes](#2.-Nested-classes)
+4. [Unclassified](#Unclassified)
+
+## JDK
+
+### JEP
+[JEP](https://en.wikipedia.org/wiki/JDK_Enhancement_Proposal) is a 
+JDK Enhancement Proposal - index of JDK proposal with goal to improve it.
+The list of all JEPs stored [here](https://openjdk.java.net/jeps/0)
 
 ## 1. Java Collections Framework (JCF)
 
