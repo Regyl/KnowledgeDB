@@ -9,10 +9,11 @@
    7. [HTTP](#HTTP) - HyperText Transfer Protocol
       1. [Methods](#Methods)
       2. [MediaTypes](#mediaTypes)
-2. [Links](#Links)
+2. [Technologies](#technologies)
+   1. [WebRTC](#webrtc) - Web Real-Time Communication
+3. [Links](#Links)
 
 # Protocols
-
 
 ## SSH
 ## SSL
@@ -29,13 +30,18 @@
 2. Patch - partially replace data
 
 ### MediaTypes
-***Basic information***: 
 ```
 type/subtype;parameter=value (i.e. application/json;charset=UTF-8)
 ```
-
 1. application/octet-stream - byte array stream
 
+## Technologies
+
+### WebRTC
+It's a technology that enables Web applications and sites 
+to capture and optionally stream audio and/or video media, 
+as well as to exchange arbitrary data between browsers without 
+requiring an intermediary.
 # Links
 1. [RU Mozilla](https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
