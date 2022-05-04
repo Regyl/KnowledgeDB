@@ -13,6 +13,8 @@ The Java Virtual Machine is an abstract computing machine. Like a real computing
 - Written in С++
 
 ## GraalVM
-
+- Written in Java
+- Based on HotSpot
+- Support JIT/AOT compilation
 ## Links
 1. [Oracle specification](https://docs.oracle.com/javase/specs/jvms/se11/html/index.html) - for JavaSE 11
