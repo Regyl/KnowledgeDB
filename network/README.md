@@ -8,7 +8,9 @@
    4. [UDP](#UDP) - User Datagram Protocol
    5. [FTP](#FTP) - File Transfer Protocol
    6. [LDAP](#LDAP) - Lightweight Directory Access Protocol
-   7. [HTTP](#HTTP) - HyperText Transfer Protocol
+   7. [SMTP](#smtp) - Simple Mail Transfer Protocol
+   8. [SNMP](#snmp) - Simple Network Management Protocol
+   9. [HTTP](#HTTP) - HyperText Transfer Protocol
       1. [Methods](#Methods)
       2. [MediaTypes](#mediaTypes)
 2. [Technologies](#technologies)
@@ -25,6 +27,9 @@
 ## UDP
 ## FTP
 ## LDAP
+## SMTP
+## SNMP
+To configure devices in IP-networks (i.e. routers, switches, servers, etc.)
 ## HTTP
 
 ### Methods
