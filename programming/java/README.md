@@ -10,7 +10,7 @@
 2. [Inner structure](#inner-structure)
    1. [JDK](#jdk)
       1. [JEP](#jep) - JDK Enhancement Proposal
-   2. [JVM](#jvm)
+   2. [JVM](https://github.com/Regyl/KnowledgeDB/blob/master/programming/java/jvm/README.md#content)
 3. [JCF](#Java-Collections-Framework-(JCF))
 4. [Nested classes](#Nested-classes)
 5. [Unclassified](#Unclassified)
