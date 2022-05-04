@@ -6,11 +6,15 @@
 5. annotations
 
 # Content
-1. [JDK](#jdk)
+1. [Roadmap](#roadmap)
+2. [JDK](#jdk)
    1. [JEP](#jep) - JDK Enhancement Proposal
-2. [JCF](#1.-Java-Collections-Framework-(JCF))
-3. [Nested classes](#2.-Nested-classes)
-4. [Unclassified](#Unclassified)
+3. [JCF](#1.-Java-Collections-Framework-(JCF))
+4. [Nested classes](#2.-Nested-classes)
+5. [Unclassified](#Unclassified)
+
+## Roadmap
+![Java roadmap](java-roadmap.jpeg)
 
 ## JDK
 
