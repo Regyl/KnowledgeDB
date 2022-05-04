@@ -23,8 +23,11 @@ As git, but centralized (centralized VCS).
 - Система создания branches, versions и прочее в GIT и SVN отличаются значительно. В GIT проще переключатся с ветки на ветку, делать merge между ними. В общем GIT я нахожу немного проще и удобнее, но бывают конечно иногда сложности. Но где их не бывает?
 
 ## Concepts
-**Links:**
-1. 
+- Git objects may be 4 types: blob, tree, commit, tag
+- Git uses SHA-1 for generating hash-sum.
+- Commit hash contains info about author, creation date
+- **Links:**
+  - [(RU) Git's graph properties](https://habr.com/ru/post/313890/#:~:text=%D0%BA%D0%BE%D0%BF%D0%B8%D0%B8%20%D0%B8%20%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0-,%D0%A1%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0%20%D0%B3%D1%80%D0%B0%D1%84%D0%B0%3A,-%E2%80%A2%20%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5%20%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D1%81%D1%8F%20%D0%B2)
 ## Commands
 
 ### git cherry pick
