@@ -32,13 +32,24 @@ more understandable, flexible, and maintainable.
 ## Open-closed Principle
 Класс должен быть открыт для дополнения и закрыт для изменения.
 ## Liskov Substitution Principle
+При подстановке вместо класса-наследника класса-родителя 
+поведение программы не должно изменяться.
+Therefore in methods (at least in Java) we can:
+- Expand access modifier
+- *Narrow* return type  
+
+What we couldn't:
+- Change even order of method parameters
+- Expand return type
 ## Interface Segregation Principle
 Лучше много интерфейсов с узкой специализацией, чем один общий.
 ## Dependency Inversion Principle
 Зависеть от абстракции, а не от реализации.
 ```java
 class Example {
+    
    Map<String, Object> map = new HashMap<>(); //It's good
+   
    HashMap<String, Object> map = new HashMap<>(); //It's bad!
 }
 ```
