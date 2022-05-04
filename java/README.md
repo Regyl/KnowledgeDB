@@ -7,8 +7,10 @@
 
 # Content
 1. [Roadmap](#roadmap)
-2. [JDK](#jdk)
-   1. [JEP](#jep) - JDK Enhancement Proposal
+2. [Inner structure](#inner-structure)
+   1. [JDK](#jdk)
+      1. [JEP](#jep) - JDK Enhancement Proposal
+   2. [JVM](#jvm)
 3. [JCF](#1.-Java-Collections-Framework-(JCF))
 4. [Nested classes](#2.-Nested-classes)
 5. [Unclassified](#Unclassified)
@@ -16,12 +18,19 @@
 ## Roadmap
 ![Java roadmap](java-roadmap.jpeg)
 
-## JDK
+## Inner structure
 
-### JEP
+### JDK
+
+#### JEP
 [JEP](https://en.wikipedia.org/wiki/JDK_Enhancement_Proposal) is a 
 JDK Enhancement Proposal - index of JDK proposal with goal to improve it.
 The list of all JEPs stored [here](https://openjdk.java.net/jeps/0)
+
+### JVM
+
+#### Links
+1. [Oracle specification](https://docs.oracle.com/javase/specs/jvms/se11/html/index.html) - for JavaSE 11
 
 ## 1. Java Collections Framework (JCF)
 
