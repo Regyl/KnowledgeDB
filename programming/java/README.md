@@ -28,14 +28,21 @@ JDK Enhancement Proposal - index of JDK proposal with goal to improve it.
 The list of all JEPs stored [here](https://openjdk.java.net/jeps/0)
 
 ## Binding
+Binding is a bind between reference and code. More precisely, between:
+- Method usage and method definition
+- Variable usage and variable definition
+
 There are 2 types of binding - *late* and *early*.
 ### Early binding
+Happens during ***compile***.
 In early binding happens below:
 - Chose static method usage
 - Chose final method usage
+- Chose overloading method usage
 
 Due to this type of binding happens during compile time, it's faster.
 ### Late binding
+Happens during ***execution***.
 On this stage happens next events:
 - Chose polymorphic method usage
 ## Java Collections Framework
