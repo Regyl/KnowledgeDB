@@ -8,6 +8,8 @@ The Java Virtual Machine is an abstract computing machine. Like a real computing
 4. [Links](#links)
 
 ## Basics
+### Links
+1. [Oracle specification](https://docs.oracle.com/javase/specs/jvms/se11/html/index.html) - for JavaSE 11
 
 ## HotSpot
 - Written in С++
@@ -16,5 +18,3 @@ The Java Virtual Machine is an abstract computing machine. Like a real computing
 - Written in Java
 - Based on HotSpot
 - Support JIT/AOT compilation
-## Links
-1. [Oracle specification](https://docs.oracle.com/javase/specs/jvms/se11/html/index.html) - for JavaSE 11

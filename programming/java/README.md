@@ -11,6 +11,8 @@
    1. [JDK](#jdk)
       1. [JEP](#jep) - JDK Enhancement Proposal
 3. [Binding](#binding)
+   1. [Early](#early-binding)
+   2. [Late](#late-binding)
 4. [JCF](#Java-Collections-Framework) - Java Collections Framework
 5. [Nested classes](#Nested-classes)
 6. [Unclassified](#Unclassified)
@@ -27,7 +29,15 @@ The list of all JEPs stored [here](https://openjdk.java.net/jeps/0)
 
 ## Binding
 There are 2 types of binding - *late* and *early*.
+### Early binding
+In early binding happens below:
+- Chose static method usage
+- Chose final method usage
 
+Due to this type of binding happens during compile time, it's faster.
+### Late binding
+On this stage happens next events:
+- Chose polymorphic method usage
 ## Java Collections Framework
 ## Nested classes
 There are 4 types of nested classes:
