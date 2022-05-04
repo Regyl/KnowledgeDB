@@ -37,8 +37,10 @@ more understandable, flexible, and maintainable.
 ## Dependency Inversion Principle
 Зависеть от абстракции, а не от реализации.
 ```java
-Map<String, Object> map = new HashMap<>(); //It's good
-HashMap<String, Object> map = new HashMap<>(); //It's bad!
+class Example {
+   Map<String, Object> map = new HashMap<>(); //It's good
+   HashMap<String, Object> map = new HashMap<>(); //It's bad!
+}
 ```
 ## Don't Repeat Yourself
 ## Keep It Simple Stupid
