@@ -29,10 +29,30 @@ As git, but centralized (centralized VCS).
   - Commit in git contains changes info. More precisely, references on ancestors.
   - Just tags.
 - Git uses SHA-1 for generating hash-sum.
+- Uses *delta* for ROM economy.
 - Commit hash contains info about author, creation date
 - **Links:**
   - [(RU) Git's graph properties](https://habr.com/ru/post/313890/#:~:text=%D0%BA%D0%BE%D0%BF%D0%B8%D0%B8%20%D0%B8%20%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0-,%D0%A1%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0%20%D0%B3%D1%80%D0%B0%D1%84%D0%B0%3A,-%E2%80%A2%20%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5%20%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D1%81%D1%8F%20%D0%B2)
   - [(RU) Git objects](https://www.opennet.ru/base/dev/git_guts.txt.html)
+  - [(RU) Work with ROM](https://ru.stackoverflow.com/questions/797025/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C%D1%8E-%D0%BF%D1%80%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8-git****)
+
+Structure of folder .git:
+├── HEAD  
+├── branches  
+├── config  
+├── description  
+├── hooks  
+│ ├── pre-commit.sample  
+│ ├── pre-push.sample  
+│ └── ...  
+├── info  
+│ └── exclude  
+├── objects  
+│ ├── info  
+│ └── pack  
+└── refs  
+├── heads  
+└── tags  
 ## Commands
 
 ### git cherry pick
