@@ -17,8 +17,11 @@ manipulates various memory areas at run time.
 ## Basics
 ### Compilation workflow
 ```mermaid
-flowchart LR;
-   A-.->B;
+flowchart LR
+   subgraph compilation [compile]
+   direction LR
+   A[.java] -- javac --> B[.class]
+   end
 ```
 ### Java Runtime Environment
 #### Classloader
