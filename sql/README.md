@@ -1,8 +1,9 @@
 # Introduction
 
 # Content
-1. [Definitions](#definitions)
-2. [Normal forms](#normal-forms)
+1. [PvL](#physic-vs-logic-data-models)
+2. [Definitions](#definitions)
+3. [Normal forms](#normal-forms)
    1. [1НФ](#1nf)
    2. [2НФ](#2nf)
    3. [3НФ](#3nf)
@@ -14,6 +15,11 @@
       1. [Фэджина](#ronald-fagin)
       2. [Делобеля-Кейси](#delobel-casey)
       3. [Бернштейна](#ethan-bernstein)
+
+## Physic vs Logic data models
+Логическая модель данных является универсальной и 
+никак не связана с конкретной реализацией СУБД. 
+Физическая модель данных, напротив, зависит от конкретной СУБД
 
 ## Definitions
 - Attribute - column/field
