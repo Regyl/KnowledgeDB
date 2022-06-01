@@ -4,23 +4,30 @@
 1. Network layer models
    1. [OSI](#osi) - Open Systems Interconnection
    2. [Five-Layer Model](#five-layer-model)
+2. [MAC](#mac---media-access-control-address) - Media Access Control address
 3. Protocols
-   1. [SSH](#SSH) - Secure Shell protocol
-   2. [SSL](#SSL) / [TLS](#TLS) - Secure Sockets Layer/Transport Layer Security
-   3. [TCP](#TCP) / [IP](#IP) - Transmission Control protocol/Internet Protocol
-   4. [UDP](#UDP) - User Datagram Protocol
-   5. [FTP](#FTP) - File Transfer Protocol
-   6. [LDAP](#LDAP) - Lightweight Directory Access Protocol
-   7. [SMTP](#smtp) - Simple Mail Transfer Protocol
-   8. [SNMP](#snmp) - Simple Network Management Protocol
-   9. [BGP](#bgp) - Border Gateway Protocol
-   10. [HTTP](#HTTP) - HyperText Transfer Protocol
+   3. [Ethernet](#ethernet)
+   4. [SSH](#SSH) - Secure Shell protocol
+   5. [SSL](#SSL) / [TLS](#TLS) - Secure Sockets Layer/Transport Layer Security
+   6. [TCP](#TCP) - Transmission Control Protocol
+   7. [IP](#IP) - Internet Protocol
+   8. [UDP](#UDP) - User Datagram Protocol
+   9. [FTP](#FTP) - File Transfer Protocol
+   10. [LDAP](#LDAP) - Lightweight Directory Access Protocol
+   11. [SMTP](#smtp) - Simple Mail Transfer Protocol
+   12. [SNMP](#snmp) - Simple Network Management Protocol
+   13. [BGP](#bgp) - Border Gateway Protocol
+   14. [HTTP](#HTTP) - HyperText Transfer Protocol
        1. [Methods](#Methods)
        2. [MediaTypes](#mediaTypes)
 4. Facts
    1. [WebRTC](#webrtc) - Web Real-Time Communication
    2. [Cables](#cables)
    3. [Hub&Switch](#hub--switch)
+   4. [Collision domain](#collision-domain)
+   5. [Network topology](#network-topology)
+   6. [VLAN](#vlan) - Virtual Local Area Network
+   7. [Data transmit methods](#data-transmit-methods)
 5. [Links](#Links)
 
 
@@ -79,7 +86,38 @@ flowchart TD;
 ***Links:***
 - [Medium](https://medium.com/@karthikayanmailsamy/5-layer-network-model-made-simplified-e813da0913ba) - about Five layer model
 - [OSI](OSI.pdf) - file
+# MAC - Media Access Control address
+MAC is a unique identifier assigned to a network interface controller 
+(NIC)(i.e. network card). It also named physical address.
 
+```mermaid
+flowchart TD
+   CoreRouter1 -- IP --- Router1
+   CoreRouter1 -- IP --- Router2
+   CoreRouter1 -- IP --- Router3
+   
+   Router1 -- MAC --- node11
+   Router1 -- MAC --- node12
+   Router1 -- MAC --- node13
+   
+   Router2 -- MAC --- node21
+   Router2 -- MAC --- node22
+   Router2 -- MAC --- node23
+   
+   Router3 -- MAC --- node31
+   Router3 -- MAC --- node32
+   Router3 -- MAC --- node33
+```
+- CoreRouter - магистральные роутеры
+- Router - роутер, объединяющий устройства в одной сети (например в одной квартире)
+- Node - устройства (i.e. телефоны, ноутбуки, электрочайники).
+
+При передаче данных IP адресата формируется из MAC-адреса устройства 
+(node) и IP роутера (router).
+## Ethernet
+Ethernet protocol is a typical LAN technology.
+Able to avoid [collision domain](#collision-domain) thanks to CSMA/CD 
+technology which let to know when cable is busy.
 ## SSH
 ## SSL
 ## TLS
@@ -114,7 +152,7 @@ There are 2 types:
 - Copper (consists of copper twisted pairs). In this type used line coding to understand where zeros on ones.
 - Fiber (consists of glass strings) - more expensive and fragile
 ## Hub & Switch
-Hub is a device лthat allows to connect many devices to each 
+Hub is a device that allows to connect many devices to each 
 other at the same time. The biggest minus is generated noises during
 transfer data.
 Switch is very similar to a hub, but with one difference - it's a 
@@ -122,6 +160,27 @@ data link layer device (hub is physical layer device). It's reduce
 the size of collision domains.
 ## Router
 Is a network-layer device. They route traffic through independent networks.
+## Collision domain
+Network segment, where only one node can transmit data at the same time.  
+It happens because data transmit to all network nodes, even if they shouldn't
+accept it. If you try to send data from both edges of cable they just face
+and make data unreadable.
+## Network topology
+Network topology refers to the physical or logical layout of a network. 
+It defines the way different nodes are placed and interconnected with each 
+other. Alternately, network topology may describe how the data is transferred
+between these nodes. There are two types of network topologies: 
+physical and logical
+- ***Physical topology*** describe real position and connections 
+between network nodes.
+- ***Logical topology*** describe signal direction within physical topology.
+## VLAN
+VLAN - Virtual Local Area Network. It is a technology that let to have multiple
+logical LAN on one physical device.
+## Data transmit methods
+- Unicast - transmit data for *only one receiver*
+- Multicast - transmit data for *group of users*
+- Broadcast - transmit data for *all devices*. Broadcast MAC address is FF-FF-FF-FF-FF-FF.
 # Links
 1. [RU Mozilla](https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
