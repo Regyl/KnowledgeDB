@@ -6,18 +6,19 @@
    2. [Five-Layer Model](#five-layer-model)
 2. [MAC](#mac---media-access-control-address) - Media Access Control address
 3. Protocols
-   3. [Ethernet](#ethernet)
+   3. [Ethernet](#ethernet) (DataLink layer)
    4. [SSH](#SSH) - Secure Shell protocol
-   5. [SSL](#SSL) / [TLS](#TLS) - Secure Sockets Layer/Transport Layer Security
-   6. [TCP](#TCP) - Transmission Control Protocol
-   7. [IP](#IP) - Internet Protocol
-   8. [UDP](#UDP) - User Datagram Protocol
-   9. [FTP](#FTP) - File Transfer Protocol
-   10. [LDAP](#LDAP) - Lightweight Directory Access Protocol
-   11. [SMTP](#smtp) - Simple Mail Transfer Protocol
-   12. [SNMP](#snmp) - Simple Network Management Protocol
-   13. [BGP](#bgp) - Border Gateway Protocol
-   14. [HTTP](#HTTP) - HyperText Transfer Protocol
+   5. [SSL](#SSL) - Secure Sockets Layer
+   6. [TLS](#TLS) - Transport Layer Security
+   7. [TCP](#TCP) - Transmission Control Protocol
+   8. [IP](#IP) - Internet Protocol
+   9. [UDP](#UDP) - User Datagram Protocol
+   10. [FTP](#FTP) - File Transfer Protocol
+   11. [LDAP](#LDAP) - Lightweight Directory Access Protocol
+   12. [SMTP](#smtp) - Simple Mail Transfer Protocol
+   13. [SNMP](#snmp) - Simple Network Management Protocol
+   14. [BGP](#bgp) - Border Gateway Protocol
+   15. [HTTP](#HTTP) - HyperText Transfer Protocol (Application layer)
        1. [Methods](#Methods)
        2. [MediaTypes](#mediaTypes)
 4. Facts
