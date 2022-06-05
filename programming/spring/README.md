@@ -1,18 +1,21 @@
 # Introduction
 
+[Overview.pdf](spring-overview.pdf)
 # Content
-1. [Core](#spring-core)
-   1. [DI](#dependency-injection-di)
-      1. [IoC](#inversion-of-control-ioc)
-   2. [Annotations](#annotations)
-2. [Spring Web](#)
-3. [Spring Security](#)
-4. [Spring Data](#)
-5. [Spring Cloud](#)
+1. [DI](#dependency-injection-di)
+   1. [IoC](#inversion-of-control-ioc)
+2. [Annotations](#annotations)
+   
+# Dependency Injection (DI)
+[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#dependency-injection-di)
 
-## Spring Core
+## Inversion of Control (IoC)
+[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#inversion-of-control-ioc)
 
-### Annotations
+***Links:***
+[Baeldung](https://www.baeldung.com/spring-core-annotations)
+
+# Annotations
 1. Autowired
 2. Bean
 3. Qualifier
@@ -26,15 +29,3 @@
 5. Required
 6. Value
 7. Lazy
-
-Links
----
-[Baeldung](https://www.baeldung.com/spring-core-annotations)
-#### @Autowired
-
-### Dependency Injection (DI)
-[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#dependency-injection-di)
-
-#### Inversion of Control (IoC)
-[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#inversion-of-control-ioc)
-
