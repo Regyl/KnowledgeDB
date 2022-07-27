@@ -13,9 +13,8 @@
 3. [Binding](#binding)
    1. [Early](#early-binding)
    2. [Late](#late-binding)
-4. [JCF](#Java-Collections-Framework) - Java Collections Framework
-5. [Nested classes](#Nested-classes)
-6. [Unclassified](#Unclassified)
+4. [Nested classes](#Nested-classes)
+5. [Unclassified](#Unclassified)
 
 ## Roadmap
 ![Java roadmap](java-roadmap.jpeg)
@@ -45,7 +44,6 @@ Due to this type of binding happens during compile time, it's faster.
 Happens during ***execution***.
 On this stage happens next events:
 - Chose polymorphic method usage
-## Java Collections Framework
 ## Nested classes
 There are 4 types of nested classes:
 - Static nested classes
