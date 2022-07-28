@@ -30,18 +30,19 @@ JCF - Java Collections Framework
   - [TreeMap](#treemap)
 
 # Collection
+- [(RU) Habr](https://habr.com/ru/post/237043/) - manual on JCF
 ![img_6.png](img_6.png)
 ## Big O Notation
 ig O describes the set of all algorithms that run no worse than a 
 certain speed (it's an upper bound) - [Baeldung](https://www.baeldung.com/java-algorithm-complexity#:~:text=Big%20O%20describes%20the%20set,certain%20speed%20(it's%20like%20equality))  
-***Time complexity of JCF***
+***Time complexity of JCF***  
 ![img.png](img.png)
 ![img.jpg](Java-collections-cheat-sheet4.jpg)
 ## List
 ![img_2.png](img_2.png)
 ### ArrayList
 - Resizeable array
-- Is not synchronized
+- Not synchronized
 ### LinkedList
 - implements Deque
 - Contains fields Node<E> first/last
@@ -61,6 +62,8 @@ sequence of operations. - [StackOverflow](https://stackoverflow.com/questions/13
 - Better to  use Deque/ArrayDeque
 ### CopyOnWriteArrayList
 - package java.util.concurrent
+
+[//]: # (- TODO: supplement)
 ## Set
 ![img_3.png](img_3.png)
 ### HashSet
@@ -79,6 +82,7 @@ Also have dummy value PRESENT of type Object.
 ### LinkedHashSet
 ***Reuses LinkedHashMap for data storage***
 ## Queue
+[//]: # (- TODO: supplement)
 - LIFO - last in first out (Deque)
 - FIFO - first in first out (Queue)
 ![img_4.png](img_4.png)
