@@ -103,15 +103,34 @@ index = hashCode(key) & (n-1)
 - What happens during call HashMap#get():
 Computing hash of key, computing index. After we sort through nodes in bucket 
 till founded key wasn't equals to passed, or the bucket's nodes are run out. 
+- If ***collision*** count > TREEIFY_THRESHOLD (constant, equals to 8), linked list in bucket 
+will be transfer to red-black tree
 - [(RU) Habr](https://habr.com/ru/post/421179/)
 ## Hashtable
-- Legacy
+- ***Legacy***
 - Synchronized
 - Like HashMap
 - Better to use [HashMap](#hashmap)
 ## LinkedHashMap
-Store objects in adding order.
+- Store objects in adding order
+- inner class Entry extends HashMap.Node, supplementing it's functionality 
+with two additional fields - Entry<K,V> before/after - links for deque
+- Generally like HashMap (as excepted), but thanks to 
+additional fields (head/tail and before/after) we obtain functionality of Deque.
+- [(RU) Habr](https://habr.com/ru/post/129037/)
 ## WeakHashMap
+- extends HashMap
+- Realized using WeakReference wrap. It means GC will delete collection item,
+if there is no strong reference on it's key 
 ## SortedMap
+- Adds firstKey()/lastKey(), subMap(K fromKey, K toKey) and headMap(K toKey)/tailMap(K fromKey)
+- **headMap(K toKey)** - Returns a view of the portion of this map whose keys are strictly less than toKey.
+- **tailMap(K fromKey)** - Returns a view of the portion of this map whose keys are greater than or equal to fromKey.
+- Overrides entrySet(), keySet(), values() due to different Javadoc (add ordering) - [StackOverflow](https://stackoverflow.com/questions/28060736/why-java-6-overrides-keyset-entryset-and-values-interface-in-sortedmap)
 ## NavigableMap
+It's a SortedMap extended with navigation methods returning the closest 
+matches for given search targets(i.e. lowerEntry, floorEntry, ceilingEntry, and higherEntry).
 ## TreeMap
+- Based on red-black tree (a bit about RB trees - [Own notes](https://github.com/Regyl/KnowledgeDB/tree/master/programming/data-structure#red-black-tree), [(RU) Habr](https://habr.com/ru/post/66926/))
+- The map is ordered according to the natural ordering of its keys, 
+or by a Comparator typically provided at creation time.
