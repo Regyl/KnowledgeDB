@@ -17,6 +17,7 @@ JCF - Java Collections Framework
     - [NavigableSet](#navigableset)
     - [TreeSet](#treeset)
   - [Queue](#queue)
+    - [PriorityQueue](#priorityqueue)
     - [Deque](#deque)
     - [ArrayDeque](#arraydeque)
     - [LinkedList](#linked-list)
@@ -82,12 +83,20 @@ Also have dummy value PRESENT of type Object.
 ### LinkedHashSet
 ***Reuses LinkedHashMap for data storage***
 ## Queue
-[//]: # (- TODO: supplement)
 - LIFO - last in first out (Deque)
-- FIFO - first in first out (Queue)
+- FIFO - first in first out (Queue)  
 ![img_4.png](img_4.png)
+- Method offer() inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions. When using a capacity-restricted queue, this method is generally preferable to add, which can fail to insert an element only by throwing an exception.
+### PriorityQueue
+- Based on priority heap
+- The head of this queue is the least element with respect to the specified ordering.
+- We can manage items position using comparator (by default uses natural ordering)
 ### Deque
+- Adds methods such as addFirst/addLast and etc.
 ### ArrayDeque
+- Resizeable-array implementation of Deque
+- Faster than Stack if using as LIFO
+- Faster than LinkedList if using as FIFO
 ### Linked List
 See [LinkedList](#linkedlist) in paragraph about Lists.
 # Map
