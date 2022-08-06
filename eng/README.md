@@ -60,6 +60,7 @@
 # Listening
 # Speaking
 # Reading
+- [enrutext](text.com/teksty/teksty-srednego-urovnya/b1-intermediate/)
 # Writing
 
 
