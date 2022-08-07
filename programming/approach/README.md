@@ -2,15 +2,15 @@
 1. [DI](#dependency-injection-di)
     1. [IoC](#inversion-of-control-ioc)
 2. [Memoization](#memoization)
-3. Acronym
+3. [Regex](#regex)
+4. Acronym
    1. [SOLID](#solid)
    2. [DRY](#dont-repeat-yourself) - Don't Repeat Yourself
    3. [KISS](#keep-it-simple-stupid) - Keep It Simple Stupid
    4. [YAGNI](#you-arent-gonna-need-it) - You Aren't Gonna Need It
-4. [GoF](#gang-of-four) - Gang of Four
+5. [GoF](#gang-of-four) - Gang of Four
 
 # Dependency Injection (DI)
-
 ## Inversion of Control (IoC)
 
 # Memoization
@@ -21,6 +21,10 @@
 таблицы. Эта техника позволяет засчёт использования дополнительной 
 памяти ускорить работу программы.
 1. [(RU) Habr](https://habr.com/en/post/97513/)
+
+# Regex
+***Links:***
+- [(RU) Tproger](https://tproger.ru/articles/java-regex-ispolzovanie-reguljarnyh-vyrazhenij-na-praktike/) - Java regex in practice
 
 ## SOLID
 In software engineering, SOLID is a mnemonic acronym 
