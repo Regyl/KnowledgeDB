@@ -23,12 +23,9 @@
        2. [MediaTypes](#mediaTypes)
 4. Facts
    1. [WebRTC](#webrtc) - Web Real-Time Communication
-   2. [Cables](#cables)
-   3. [Hub&Switch](#hub--switch)
-   4. [Collision domain](#collision-domain)
-   5. [Network topology](#network-topology)
-   6. [VLAN](#vlan) - Virtual Local Area Network
-   7. [Data transmit methods](#data-transmit-methods)
+   2. [Network topology](#network-topology)
+   3. [VLAN](#vlan) - Virtual Local Area Network
+   4. [Data transmit methods](#data-transmit-methods)
 5. [Links](#Links)
 
 
@@ -117,7 +114,7 @@ flowchart TD
 (node) и IP роутера (router).
 ## Ethernet
 Ethernet protocol is a typical LAN technology.
-Able to avoid [collision domain](#collision-domain) thanks to CSMA/CD 
+Able to avoid *collision domain* thanks to CSMA/CD 
 technology which let to know when cable is busy.
 ## SSH
 ## SSL
@@ -148,24 +145,7 @@ It's a technology that enables Web applications and sites
 to capture and optionally stream audio and/or video media, 
 as well as to exchange arbitrary data between browsers without 
 requiring an intermediary.
-## Cables
-There are 2 types:
-- Copper (consists of copper twisted pairs). In this type used line coding to understand where zeros on ones.
-- Fiber (consists of glass strings) - more expensive and fragile
-## Hub & Switch
-Hub is a device that allows to connect many devices to each 
-other at the same time. The biggest minus is generated noises during
-transfer data.
-Switch is very similar to a hub, but with one difference - it's a 
-data link layer device (hub is physical layer device). It's reduce 
-the size of collision domains.
-## Router
-Is a network-layer device. They route traffic through independent networks.
-## Collision domain
-Network segment, where only one node can transmit data at the same time.  
-It happens because data transmit to all network nodes, even if they shouldn't
-accept it. If you try to send data from both edges of cable they just face
-and make data unreadable.
+
 ## Network topology
 Network topology refers to the physical or logical layout of a network. 
 It defines the way different nodes are placed and interconnected with each 
