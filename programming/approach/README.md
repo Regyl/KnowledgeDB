@@ -7,6 +7,7 @@
    2. [DRY](#dont-repeat-yourself) - Don't Repeat Yourself
    3. [KISS](#keep-it-simple-stupid) - Keep It Simple Stupid
    4. [YAGNI](#you-arent-gonna-need-it) - You Aren't Gonna Need It
+4. [GoF](#gang-of-four) - Gang of Four
 
 # Dependency Injection (DI)
 
@@ -53,3 +54,10 @@ class Example {
 ## Don't Repeat Yourself
 ## Keep It Simple Stupid
 ## You Aren't Gonna Need It
+
+# Gang of Four
+![ru1](GoFru1.jpg)
+![ru2](GoFru2.jpg)
+
+![eng1](GoFeng1.png)
+![eng2](GoFeng2.png)
