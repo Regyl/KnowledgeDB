@@ -7,17 +7,17 @@
     - [Past Simple](#past-simple)
     - [Future Simple](#future-simple)
   - Continuous
-    - [Present Continuous]()
-    - [Past Continuous]()
-    - [Future Continuous]()
+    - [Present Continuous](#present-continuous)
+    - [Past Continuous](#past-continuous)
+    - [Future Continuous](#future-continuous)
   - Perfect
-    - [Present Perfect]()
-    - [Past Perfect]()
-    - [Future Perfect]()
+    - [Present Perfect](#present-perfect)
+    - [Past Perfect](#past-perfect)
+    - [Future Perfect](#future-perfect)
   - Perfect Continuous
-    - [Present Perfect Continuous]()
-    - [Past Perfect Continuous]()
-    - [Future Perfect Continuous]()
+    - [Present Perfect Continuous](#present-perfect-continuous)
+    - [Past Perfect Continuous](#past-perfect-continuous)
+    - [Future Perfect Continuous](#future-perfect-continuous)
 - LSRW - General abilities
   - [Listening](#listening)
   - [Speaking](#speaking)
@@ -30,6 +30,7 @@
   - [B2](#b2)
   - [C1](#c1)
   - [C2](#c2)
+- Other
 
 # Tenses
 [The best book ever](tenses.pdf)
@@ -38,6 +39,11 @@
 
 
 ## Present Simple
+***When to use***:
+- Routine (smthng u do every day)
+
+***How to build***:  
+
 ## Past Simple
 ## Future Simple
 
@@ -73,3 +79,7 @@
 # C1
 # C2
 
+# Other
+![img.png](prepositions-of-place.png)
+![img.png](prepositions-of-movements.png)
+![img.png](prepositions-of-times.png)
