@@ -9,6 +9,8 @@
    3. [KISS](#keep-it-simple-stupid) - Keep It Simple Stupid
    4. [YAGNI](#you-arent-gonna-need-it) - You Aren't Gonna Need It
 5. [GoF](#gang-of-four) - Gang of Four
+6. Patterns
+   1. [Outbox](#outbox)
 
 # Dependency Injection (DI)
 ## Inversion of Control (IoC)
@@ -65,3 +67,9 @@ class Example {
 
 ![eng1](GoFeng1.png)
 ![eng2](GoFeng2.png)
+
+## Outbox
+При использовании kafka сохранять сообщения перед отправкой в БД и 
+по необходимости переиспользовать их.
+
+- [(RU) Habr](https://habr.com/ru/company/lamoda/blog/678932/)
