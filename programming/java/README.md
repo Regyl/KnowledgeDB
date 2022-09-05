@@ -7,7 +7,6 @@
       1. [JEP](#jep) - JDK Enhancement Proposal
 3. Naming conventions
    1. [Generics](#generics)
-4. Other
 
 # Roadmap
 ![Java roadmap](java-roadmap.jpeg)
@@ -28,7 +27,4 @@ The list of all JEPs stored [here](https://openjdk.java.net/jeps/0)
 - S − Type, and is mainly used to represent second generic type parameter.
 - U − Type, and is mainly used to represent third generic type parameter.
 - V − Type, and is mainly used to represent fourth generic type parameter.
-
-# Other
-- [(RU) Habr](https://habr.com/ru/post/674116/) - Futile cycles
-- [(RU) Habr](https://habr.com/ru/post/274811/) - DateTimeAPI
+- 
