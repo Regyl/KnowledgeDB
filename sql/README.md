@@ -2,8 +2,10 @@
 
 # Content
 1. [PvL](#physic-vs-logic-data-models)
-2. [Definitions](#definitions)
-3. [Normal forms](#normal-forms)
+2. [Transactions](#Transactions)
+   2. [ACID](#acid)
+3. [Definitions](#definitions)
+4. [Normal forms](#normal-forms)
    1. [1НФ](#1nf)
    2. [2НФ](#2nf)
    3. [3НФ](#3nf)
@@ -20,6 +22,15 @@
 Логическая модель данных является универсальной и 
 никак не связана с конкретной реализацией СУБД. 
 Физическая модель данных, напротив, зависит от конкретной СУБД
+
+## Transactions
+
+### ACID
+[(RU) Habr](https://habr.com/en/post/317884/)  
+A - Atomicity. Each transaction will be completed or rollback.  
+C - Consistency. Completion of transaction cannot break data consistency.  
+I - isolation. Transactions will be executed sequentially   
+D - Durability. Data couldn't be broken after successful transaction  
 
 ## Definitions
 - Attribute - column/field
