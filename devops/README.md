@@ -108,7 +108,7 @@ In turn workers contains
 Agent that controls container startup
 
 #### kube-proxy
-
+Configures network to provide connect to pods on its worker 
 
 #### Additions
 ##### DNS
@@ -123,19 +123,31 @@ with shared storage and network resources, and a specification
 for how to run the containers.
 
 #### Service
+Abstract object that defines logical bunch of pods and access policy
+
 #### Deployment
 - Runs a set of identical pods
 - Monitors the state of each pod, updating as necessary
 
 #### StatefulSet
+[//]: # (FIXME)
+
 #### ReplicaSet
+A ReplicaSet's purpose is to maintain a stable set of 
+replica Pods running at any given time.
 
 ### Helm
-Helm is a tool to help you define, install, and upgrade applications running on Kubernetes.
+Helm is a tool to help you define, install, and upgrade 
+applications running on Kubernetes.
+
 ## OpenShift
+[(RU) Habr](https://habr.com/en/company/redhatrussia/blog/494254/)
+OpenShift is a wrap around the Kubernetes. Fully built on Kubernetes
 
 Advantages:
 - Let control load on specified endpoints
+
+[//]: # (FIXME)
 
 # Grafana
 ## Clients
