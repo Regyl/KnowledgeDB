@@ -41,6 +41,23 @@ flowchart TD
    DataLink --- Physical
 ```
 
+### Physical
+### DataLink
+### Network
+Routing thank to routers and MAC-addresses (diagram below).
+
+### Transport
+Operates such protocols as TCP, UDP.  
+
+### Session layer
+It manages sessions.
+
+### Presentation layer
+Transfer text between encodings (UTS-8 -> ASCII), present images and videos.
+
+### Application layer
+Operates such protocols as HTTP, FTP.
+
 ## Five-Layer model
 ```mermaid
 flowchart TD;
@@ -64,7 +81,7 @@ flowchart TD;
 за передачу данных между узлами одной и той же сети 
 или канала. 
 
-Третий уровень – ***сетевой***, иногда его также называют межсетевым. 
+Третий уровень – ***сетевой***. 
 Сетевой уровень позволяет передавать данные в целой группе сетей. 
 Когда устройство из вашей домашней сети подключается к серверу в интернете, данные 
 передаются между этими двумя точками именно благодаря сетевому 
