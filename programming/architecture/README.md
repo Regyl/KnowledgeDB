@@ -22,8 +22,10 @@
 - [GitHub](https://github.com/heynickc/awesome-ddd) - complete resource collection
 - [(RU) Habr](https://habr.com/ru/company/dododev/blog/523540/) - example
 - Books:
-    - [Green book.pdf](VaughnVernonDDDDistilledRU.pdf)
+    - [Green book.pdf](../books/VaughnVernonDDDDistilledRU.pdf)
     - [Green book eng.pdf](VaughnVernonDDDDistilledEng.pdf) - eng is better
+
+[//]: # (FIXME)
 
 # Test-Driven Design
 Test-driven development (TDD) is a software development process relying
@@ -31,7 +33,18 @@ on software requirements being converted to test cases before software
 is fully developed.
 
 # Event-Driven Architecture
-- Kafka as event bus
+
+- Message broker as event bus
+
+Advantages:
+- No blocking HTTP-requests
+
+Disadvantages:
+- No immediate answers
+
+[(RU) Habr](https://habr.com/en/post/658157/)
+[(RU) Habr](https://habr.com/en/company/piter/blog/530514/)
+[(RU) Habr](https://habr.com/en/company/otus/blog/492066/)
 
 # Hexagonal architecture
 ![image.png](hexagonal%20architecture.jpg)
