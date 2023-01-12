@@ -17,6 +17,7 @@
       1. [Фэджина](#ronald-fagin)
       2. [Делобеля-Кейси](#delobel-casey)
       3. [Бернштейна](#ethan-bernstein)
+5. [Custom SQL's](#custom-sqls)
 
 ## Physic vs Logic data models
 Логическая модель данных является универсальной и 
@@ -107,3 +108,8 @@ If you're from RUT MIIT - [u could text me](http://t.me/corgidile)
 4. Собираем Sd аналогично предыдущему алгоритму.
 ### Links
 1. [(RU) Habr](https://habr.com/ru/post/254773/) - Нормализация отношений. Шесть нормальных форм
+
+
+# Custom SQL's
+Each SQL database realization has its own unique SQL dialect.  
+For example, PostgreSQL has PL/pgsql: [link](https://www.postgresql.org/docs/current/plpgsql.html)

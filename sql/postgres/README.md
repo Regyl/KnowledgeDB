@@ -3,8 +3,9 @@
 # Content
 1. [Transactions](#Transactions)
    1. [Phenomena](#Phenomena)
-2. [Indexes](#Indexes),
-   1. [B-Tree](#b-tree)
+2. [Indexes](#Indexes)
+   1. [Index creation](#index-creation)
+   2. [B-Tree](#b-tree)
    2. [Hash](#hash)
    3. [GiST](#gist)
    4. [SP-GiST](#sp-gist)
@@ -43,6 +44,14 @@ transactions one at a time.
 # Indexes
 - [Documentation](https://www.postgresql.org/docs/current/indexes.html)
 - [(RU) Habr](https://habr.com/en/company/postgrespro/blog/326096/)
+
+## Index creation
+Using parameter **concurrently** in postgres allows to 
+create index by non-blocking method for writing queries.
+```sql
+create index concurrently order_date_btree on order_entity using btree (order_date);
+```
+
 
 ## B-Tree
 B-trees can handle equality and range queries on data that can 
