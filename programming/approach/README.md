@@ -20,7 +20,7 @@
 заключающийся в том, что для функции создаётся таблица результатов,
 и будучи вычисленной при определённых значениях параметров результат 
 заносится в эту таблицу. В дальнейшем результат берётся из данной 
-таблицы. Эта техника позволяет засчёт использования дополнительной 
+таблицы. Эта техника позволяет за счёт использования дополнительной 
 памяти ускорить работу программы.
 1. [(RU) Habr](https://habr.com/en/post/97513/)
 
@@ -62,6 +62,7 @@ class Example {
 ## You Aren't Gonna Need It
 
 # Gang of Four
+[GoF](https://refactoring.guru/ru/design-patterns) - Design Patterns: Elements of Reusable Object-Oriented Software
 ![ru1](GoFru1.jpg)
 ![ru2](GoFru2.jpg)
 

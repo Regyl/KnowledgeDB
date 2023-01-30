@@ -12,9 +12,6 @@
 ## Inversion of Control (IoC)
 [***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#inversion-of-control-ioc)
 
-***Links:***
-[Baeldung](https://www.baeldung.com/spring-core-annotations)
-
 # Annotations
 1. Autowired
 2. Bean
@@ -29,3 +26,6 @@
 5. Required
 6. Value
 7. Lazy
+
+Links:
+- [Baeldung](https://www.baeldung.com/spring-core-annotations)
