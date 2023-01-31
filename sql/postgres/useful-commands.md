@@ -17,3 +17,12 @@ ORDER BY relpages DESC;
 -- Create index concurrently  
 create index concurrently order_date_btree on order_entity using btree (order_date);
 ```
+
+```
+-- Read-write ration
+select datname,
+       tup_returned + tup_fetched as read_num_rows,
+       tup_inserted + tup_updated + tup_deleted as write_num_rows,
+       cast((tup_inserted + tup_updated + tup_deleted) as real) / NULLIF(cast((tup_returned + tup_fetched) as real), 0) * 100 as percentage
+from pg_stat_database;
+```

@@ -6,10 +6,12 @@
 2. [Indexes](#Indexes)
    1. [Index creation](#index-creation)
    2. [B-Tree](#b-tree)
-   2. [Hash](#hash)
-   3. [GiST](#gist)
-   4. [SP-GiST](#sp-gist)
-   5. [BRIN](#brin)
+   3. [Hash](#hash)
+   4. [GiST](#gist)
+   5. [SP-GiST](#sp-gist)
+   6. [BRIN](#brin)
+3. [The Cumulative Statistics System](#the-cumulative-statistics-system)
+   1. [pg_stat_database](#pg_stat_database)
 
 # Transactions
 [Documentation](https://www.postgresql.org/docs/current/transaction-iso.html)
@@ -88,6 +90,11 @@ GIN - generalized inverted index
 BRIN - block range index
 [//]: # (FIXME add info)
 
+## The Cumulative Statistics System
+- [Documentation](https://www.postgresql.org/docs/current/monitoring-stats.html)
+### pg_stat_database
+- [Documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#PG-STAT-DATABASE-VIEW)
+- [Deep dive into postgres stats](https://dataegret.com/2017/03/deep-dive-into-postgres-stats-pg_stat_database/)
 
 ## Linked themes
 1. [Docker](https://github.com/Regyl/KnowledgeDB/tree/master/virtual/docker)
