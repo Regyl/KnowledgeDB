@@ -22,12 +22,15 @@
 Физическая модель данных, напротив, зависит от конкретной СУБД
 
 ## Transactions
+A bunch of operations that should be executed as one unit.
 ### ACID
-[(RU) Habr](https://habr.com/en/post/317884/)  
-A - Atomicity. Each transaction will be completed or rollback.  
-C - Consistency. Completion of transaction cannot break data consistency.  
-I - isolation. Transactions will be executed sequentially   
-D - Durability. Data couldn't be broken after successful transaction  
+- A - Atomicity. Each transaction will be completed or rollback.  
+- C - Consistency. Completion of transaction cannot break data consistency.  
+- I - Isolation. Transactions will be executed sequentially   
+- D - Durability. Data couldn't be broken after successful transaction  
+
+Links:
+- [(RU) Habr](https://habr.com/en/post/317884/)
 
 ## Definitions
 - Attribute - column/field
@@ -41,8 +44,7 @@ D - Durability. Data couldn't be broken after successful transaction
 - Multivalued functional dependency - 
 
 ## Normal forms
-The **objectives** are is to 
-avoid update/insertion/deletion anomalies
+The **objectives** are is to avoid update/insertion/deletion anomalies
 
 Links:
 - [Habr (RU)](https://habr.com/ru/post/254773/) - Нормализация отношений. Шесть нормальных форм
@@ -55,8 +57,8 @@ Links:
 ### 6NF
 
 ## Custom SQL's
-Each SQL database realization has its own unique SQL dialect.  
+Each SQL database realization has its own unique SQL dialect. **It affords to write stored procedures**.
 For example, PostgreSQL has PL/pgsql: [link](https://www.postgresql.org/docs/current/plpgsql.html)
 
-## Read-write ration
+## Read-write ratio
 - Standard is 75/25 (75% read, 25% write)
