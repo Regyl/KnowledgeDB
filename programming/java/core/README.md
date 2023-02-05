@@ -96,6 +96,7 @@ compatibility, we CAN obtain info about generics below:
 - Parametrized with unbounded wildcards
 - Raw types
 - arrays
+
 And CANNOT about next three. They are not reifiable:
 - Variable of type (T)
 - Parametrized with type parameter (List<Number> ArrayList<String>, List<List<String>>)
@@ -117,6 +118,9 @@ static List<String> t() {
 }
 ```
 And we will receive an ClassCastException during ls.get(0).
+
+---
+
 ## Type Inference
 We can compile code below thanks to diamond operator and type inference from context:
 ```java
