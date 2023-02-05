@@ -2,17 +2,22 @@
 
 [Overview.pdf](spring-overview.pdf)
 # Content
-1. [DI](#dependency-injection-di)
-   1. [IoC](#inversion-of-control-ioc)
+1. [Core](#core)
+   1. [BeanFactory](#beanfactory)
+   2. [ApplicationContext](#applicationcontext)
+   3. [BeanPostProcessor](#beanpostprocessor)
+   4. [Aspect Oriented Programming](#aspect-oriented-programming)
 2. [Annotations](#annotations)
-   
-# Dependency Injection (DI)
-[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#dependency-injection-di)
 
-## Inversion of Control (IoC)
-[***Related to***](https://github.com/Regyl/KnowledgeDB/tree/master/java/approach#inversion-of-control-ioc)
+## Core
+### BeanFactory
+### ApplicationContext
+### BeanPostProcessor
+### Aspect Oriented Programming
 
-# Annotations
+---
+
+## Annotations
 1. Autowired
 2. Bean
 3. Qualifier

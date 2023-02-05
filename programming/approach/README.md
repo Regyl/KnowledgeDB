@@ -1,31 +1,35 @@
 # Content
-1. [DI](#dependency-injection-di)
-    1. [IoC](#inversion-of-control-ioc)
-2. [Memoization](#memoization)
-3. [Regex](#regex)
-4. Acronym
+1. [DIP](#dependency-inversion-principle--dip-)
+2. [IoC](#inversion-of-control--ioc-)
+3. [Dependency Injection](#dependency-injection--di-)
+4. [Memoization](#memoization)
+5. [Regex](#regex)
+6. Acronym
    1. [SOLID](#solid)
    2. [DRY](#dont-repeat-yourself) - Don't Repeat Yourself
    3. [KISS](#keep-it-simple-stupid) - Keep It Simple Stupid
    4. [YAGNI](#you-arent-gonna-need-it) - You Aren't Gonna Need It
-5. [GoF](#gang-of-four) - Gang of Four
-6. Patterns
+   5. [GRASP](#grasp) - General Responsibility Assignment Software Patterns
+7. [GoF](#gang-of-four) - Gang of Four
+8. Patterns
    1. [Outbox](#outbox)
 
+# Dependency Inversion Principle (DIP)
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+# Inversion of Control (IoC)
+Inversion of Control is when library call programmer's code instead of vice versa
+- [Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core)
+- [StackOverflow (RU)](ru.stackoverflow.com/questions/499395/)
+- [Book from Coursera](Spring%20IoC%20Container.pdf)
 # Dependency Injection (DI)
-## Inversion of Control (IoC)
+- Allows to decouple the code
 
 # Memoization
-Мемоизация — вариант кеширования, 
-заключающийся в том, что для функции создаётся таблица результатов,
-и будучи вычисленной при определённых значениях параметров результат 
-заносится в эту таблицу. В дальнейшем результат берётся из данной 
-таблицы. Эта техника позволяет за счёт использования дополнительной 
-памяти ускорить работу программы.
+Variant of function result caching.
 1. [(RU) Habr](https://habr.com/en/post/97513/)
 
 # Regex
-***Links:***
+Links:
 - [(RU) Tproger](https://tproger.ru/articles/java-regex-ispolzovanie-reguljarnyh-vyrazhenij-na-praktike/) - Java regex in practice
 
 ## SOLID
