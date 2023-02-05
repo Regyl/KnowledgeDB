@@ -14,13 +14,15 @@
    1. [pg_stat_database](#pg_stat_database)
 
 # Transactions
-[Documentation](https://www.postgresql.org/docs/current/transaction-iso.html)
-[(RU) Habr](https://habr.com/en/post/317884/)
 Transaction levels:
 - Read uncommitted
-- Read committed (*default*)
-- Repeatable read
-- Serializable
+- Read committed (default, sees data that exists before transaction start)
+- Repeatable read (differs from read committed sees snapshot as of the start of the first non-transaction-control statement in the transaction )
+- Serializable (exactly like repeatable read, but also checks that concurrency execution will produce the same resul as sequential)
+
+Links:
+- [Documentation](https://www.postgresql.org/docs/current/transaction-iso.html)
+- [(RU) Habr](https://habr.com/en/post/317884/)
 ## Phenomena
 **Dirty read**  
 A transaction reads data written
