@@ -20,6 +20,7 @@
    12. [BGP](#bgp) - Border Gateway Protocol
    13. [HTTP](#HTTP) - HyperText Transfer Protocol (Application layer)
        1. [Methods](#Methods)
+          2. [Idempotent](#Idempotent)
        2. [MediaTypes](#mediaTypes)
 4. Facts
    1. [WebRTC](#webrtc) - Web Real-Time Communication
@@ -151,6 +152,17 @@ Used in core routers (internet provider's routers) to route traffic.
 ### Methods
 1. Put - full replace data
 2. Patch - partially replace data
+#### Idempotent
+Idempotent - method that can be called multiple times without different outcomes.
+**Advantages** consist in safe recalling without side effects.
+Idempotent methods: 
+- PUT 
+- DELETE
+- GET
+
+Links:
+- [Documentation](https://httpwg.org/specs/rfc9110.html#idempotent.methods)
+- [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Glossary/Idempotent)
 ### MediaTypes
 ```
 type/subtype;parameter=value (i.e. application/json;charset=UTF-8)
