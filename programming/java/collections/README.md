@@ -76,7 +76,7 @@ For the rest there is no interesting in this realization.
 ### SortedSet
 A Set that further provides a total ordering on its elements.
 ### NavigableSet
-A SortedSet extended with navigation methods reporting closest matches for given search targets.
+A SortedSet extended with navigation methods reporting the closest matches for given search targets.
 ### TreeSet
 ***Reuses TreeMap for data storage***
 Also have dummy value PRESENT of type Object.
