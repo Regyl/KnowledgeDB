@@ -8,3 +8,7 @@
   ````
   docker exec -it <id> psql -U <username> -d <database>
   ````
+3. Copy file to container
+  ````
+  docker cp <path_to_file> <container_name>:<path_to_dir_in_container>
+  ````
