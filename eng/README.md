@@ -37,18 +37,28 @@
 ![img.png](tenses.png)
 ![img.png](tenses1.png)
 
-
+He/She/It - Vs
 ## Present Simple
 ***When to use***:
 - Routine (smthng u do every day)
 
-***How to build***:  
+How to build:
+- V/Vs
+
 
 ## Past Simple
 ## Future Simple
 
 
 ## Present Continuous
+When to use:
+- Actions we want to show **irritation** (exmp: "You're **always** interrupting me")
+- Actions planned on future
+- Action happens right now
+
+How to build:
+
+
 ## Past Continuous
 ## Future Continuous
 

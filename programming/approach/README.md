@@ -19,7 +19,7 @@ High-level modules should not depend on low-level modules. Both should depend on
 # Inversion of Control (IoC)
 Inversion of Control is when library call programmer's code instead of vice versa
 - [Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core)
-- [StackOverflow (RU)](ru.stackoverflow.com/questions/499395/)
+- [StackOverflow (RU)](https://ru.stackoverflow.com/questions/499395/)
 - [Book from Coursera](Spring%20IoC%20Container.pdf)
 # Dependency Injection (DI)
 - Allows to decouple the code

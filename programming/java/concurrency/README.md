@@ -1,5 +1,7 @@
 # Introduction
 
+[DOCUMENTATION](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html)
+
 # Content
 1. [1. Basics](#1-basics)
    1. [Keyword synchronized](#11-synchronized)
@@ -120,7 +122,7 @@ flowchart TD
     check1{Need subtasks?}
     check2{Has awaiting?}
     check3{Nested level equals to 1?}
-    [Server.java](..%2F..%2F..%2F..%2F..%2FDownloads%2FTelegram%20Desktop%2FServer.java)
+
     statement1(ThreadPoolExecutor)
     statement2(ForkJoinPool)
     statement3(Coroutine emulation through CompletableFuture)
@@ -137,7 +139,7 @@ flowchart TD
 ### Future
 Operations:
 - Assignment to a future task (e.g. Future = executor.submit(task))
-- Blocking read (e.g. Future.get()). If you call it current thread will wait until task associated with this future will be completed.
+  - Blocking read (e.g. Future.get()). If you call it current thread will wait until task associated with this future will be completed.
 
 ### RecursiveAction vs RecursiveTask
 All they have methods _compute()_ and _join()_, but in case of recursiveTask _join()_ will produce some variable value
@@ -164,7 +166,9 @@ Note that ideal parallelism is only a function of the parallel program, and does
 - [Adam's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law#Speedup_in_a_serial_program) - the theoretical program speedup achieves that to parallelism.
 
 ## Issues
-- [Deadlock]
+- Deadlock
+- Livelock
+- Starvation
 - [Race condition (RU)](https://habr.com/ru/company/timeweb/blog/679796/#:~:text=%D0%BA%20%C2%AB%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8E%20%D0%B3%D0%BE%D0%BD%D0%BA%D0%B8%C2%BB%20(-,race%20condition,-)%20%D0%B8%20%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0) - good example of importance
 Data race has two different types: read-write and write-write.
 
