@@ -48,3 +48,27 @@ Disadvantages:
 
 # Hexagonal architecture
 ![image.png](hexagonal%20architecture.jpg)
+
+## Software Design and Architecture
+### Pattern Saga
+For transaction management between microservices. There are two ways to manipulate transactions:
+- Orchestration - there is one orchestrator which manages what transaction to start in services
+- Choreography - each transaction publishes event to start transaction in another service
+
+Implementations:
+- Camunda 
+- AxonIQ [cookbook](https://github.com/AxonIQ/axoniq-cookbook/blob/master/recipes/version-3.1.X/16_basic-axon-framework-application-with-spring-boot.md)
+
+Links:
+- Good explanation - [(RU) Habr](https://habr.com/en/articles/427705/)
+- [(RU) Habr](https://habr.com/en/articles/744460/)
+### Object-Oriented Design
+Each software component divides into 3 parts:
+- entities
+- boundary objects ( This could be an object that deals with another software system - like an object that obtains information from the Internet)
+- control objects
+---
+**CRC** cards are need for a basic system design, to show which components it will consist of.
+Each CRC contains component name, it's responsibilities and dependency components
+![img.png](crc.png)
+---
