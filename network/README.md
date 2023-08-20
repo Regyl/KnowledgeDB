@@ -146,9 +146,22 @@ TCP Port — TCP Port is used to do multiplexing and de-multiplexing operations.
 ## SMTP
 ## SNMP
 To configure devices in IP-networks (i.e. routers, switches, servers, etc.)
+
 ## BGP
 Used in core routers (internet provider's routers) to route traffic.
+
 ## HTTP
+### Versions
+Http 1.1 - pipelining. E.g. multiple requests, and all responses only after the last request. 
+- Advantages: less movements since u don't need to initialize multiple expensive tcp connections 
+- Disadvantages: Errors during one node of pipeline (doesn't matter request or response) will affect the entire pipeline. 
+---
+Http 2.0: http streams. Multiple independent request in one tcp connection 
+- Advantage: error in one of requests doesn't affect the rest Note: there still was a problem in TCP protocol 
+related to headline blocking 
+---
+- Http 3.0: was introduced protocol QUIC based on UDP. The target was smartphones, which users constantly changes using 
+network station. QUIC doesn't require to create a new handshake for a new network connection
 ### Methods
 1. Put - full replace data
 2. Patch - partially replace data
