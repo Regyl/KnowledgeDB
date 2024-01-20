@@ -14,7 +14,7 @@
    5. [5НФ](#5nf)
    6. [6НФ](#6nf)
 5. [Custom SQL's](#custom-sqls)
-6. [Read-write ration]
+6. [Read-write ratio](#read-write-ratio)
 
 ## Physic vs Logic data models
 Логическая модель данных является универсальной и 
