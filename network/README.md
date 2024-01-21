@@ -19,8 +19,9 @@
    11. [SNMP](#snmp) - Simple Network Management Protocol
    12. [BGP](#bgp) - Border Gateway Protocol
    13. [HTTP](#HTTP) - HyperText Transfer Protocol (Application layer)
-       1. [Methods](#Methods)
-          2. [Idempotent](#Idempotent)
+       1. [Versions diff](#versions)
+       2. [Methods](#Methods)
+          1. [Idempotent](#Idempotent)
        2. [MediaTypes](#mediaTypes)
 4. Facts
    1. [WebRTC](#webrtc) - Web Real-Time Communication
@@ -136,6 +137,12 @@ Able to avoid *collision domain* thanks to CSMA/CD
 technology which let to know when cable is busy.
 ## SSH
 ## SSL
+
+ssl более старый, tls новый
+Работают на:
+- пары ключей (открытый и закрытый) для шифрования/дешифрования
+- сертификаты для аутентификации (mitm attack)
+- HMAC для целостности данных (хэш сообщения подкладывается в конец для проверки другой стороной)
 ## TLS
 ## TCP
 TCP Port — TCP Port is used to do multiplexing and de-multiplexing operations. IANA(Internet Assigned Numbers Authority) has limited this to 16 bit value i.e 0–65536 where 1–1023 are system ports assigned to servers, 1024–49151 are registered ports assigned for special operations like database listening,etc and finally 49152–65536 are ephemeral ports assigned to client’s programs used for proper delivery of data to the applications.
@@ -181,6 +188,32 @@ Links:
 type/subtype;parameter=value (i.e. application/json;charset=UTF-8)
 ```
 1. application/octet-stream - byte array stream
+
+### CORS
+CORS - cross-origin request policy. Allows to deny request to ur web-resource from other sites. Implements using header *Access-Control-Allow-Origin*. 
+If web-server configured to prevent from CORS attacks, then client (that should support CORS policy) should send header *Access-Control-Allow-Origin* 
+with url of current opened site (implemented on browser level under the hood).  
+When CORS is enabled, browser sends *pre-flight* OPTIONS request to check, if server accept requests from current host. If response is 200 OK, then browser sends next request with useful payload/etc.  
+Links:
+- [(RU) Habr](https://habr.com/en/companies/otus/articles/706908/)
+- [(RU) another Habr](https://habr.com/en/companies/macloud/articles/553826/)
+
+### CSRF
+CSRF is cross-site request forgery. This attack occurs when a malicious web-site, email, blog, instant message, 
+or program tricks an authenticated user's web browser into performing an unwanted action on a trusted site. If a target user is 
+authenticated to the site, unprotected target sites cannot distinguish between legitimate authorized requests and forged authenticated requests.  
+The most populate method to prevent these attacks is to use token, which is generated for each user request.
+
+Links:
+- [OWASP documentation](https://owasp.org/www-community/attacks/csrf)
+
+### RMM
+In context of RESTful:  
+RMM stands for Richardson Maturity Model. This model introduces 4 levels of usage of REST rules in application.  
+- First: only POST method
+- Second: multiple basic URIs (such as /orders, /users)
+- Third: multiple HTTP methods
+- Fourth: HATEOAS (note: i don't think it's required) which stands for HyperText as Engine of Application State - approach when application return it's allowed to request URIs
 
 ## WebRTC
 It's a technology that enables Web applications and sites 
