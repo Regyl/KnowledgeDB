@@ -79,8 +79,12 @@ public class Monitor {
 - Synchronized on the first element in the bucket (for write)
 #### 2.1.2 Synchronized vs Concurrent
 ### 2.2 Locks
+- Structured locks implements by using key word synchronized
+- Unstructured locks implements by using structures below
 #### 2.2.1 ReentrantLock
 #### 2.2.2. ReentrantReadWriteLock
+- A read-write lock allows concurrent access for read-only operations, allowing multiple threads to read shared data in parallel.
+- When a thread, T, has obtained a write lock, all other reader and writer threads will be blocked until thread T completes its write operation and releases its write lock.
 #### 2.2.3 StampedLock
 #### 2.2.4 Phaser
 Зачем по факту разделение на arrive/wait в алгоритме из ДЗ
@@ -160,15 +164,16 @@ Note that ideal parallelism is only a function of the parallel program, and does
 - Functional determinism - always the same output on the same input 
 - Structural determinism - always the same computation graph
 
+Actors are like Kafka to share data between threads
 
 
 ## Performance
 - [Adam's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law#Speedup_in_a_serial_program) - the theoretical program speedup achieves that to parallelism.
 
-## Issues
-- Deadlock
-- Livelock
-- Starvation
+## Issues (liveness)
+- Deadlock (e.g. two threads and each waits for another one)
+- Livelock (e.g. two threads and each states constantly changing, but cannot achieve the state to exit (both affects each other))
+- Starvation (e.g. two threads with different priority and only one CPU core. There is a possible situation when prioritized thread constantly uses CPU and less prioritized will be never executed)
 - [Race condition (RU)](https://habr.com/ru/company/timeweb/blog/679796/#:~:text=%D0%BA%20%C2%AB%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8E%20%D0%B3%D0%BE%D0%BD%D0%BA%D0%B8%C2%BB%20(-,race%20condition,-)%20%D0%B8%20%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0) - good example of importance
 Data race has two different types: read-write and write-write.
 
