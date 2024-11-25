@@ -1,25 +1,50 @@
 # Introduction
+Interesting but useless:
+БД - это не хранилище, не биг дата, это для конкурентного доступа
+Если ничего не помогает, можно вручную переписать запрос, например, используя материализованные 
+представления, общие табличные выражения (Common Table Expressions, CTE). Либо уточнить 
+требования предметной области и, возможно, кардинальным образом переписать логику запроса.
 
 # Content
-1. [Transactions](#Transactions)
-   1. [Phenomena](#Phenomena)
-2. [Scan types]()
-3. [Join types](#join-types)
-   1. [Nested loop](#nested-loop)
-   2. [Merge join](#merge-join)
-   3. [Hash join](#hash-join)
-4. [Indexes](#Indexes)
-   1. [Index creation](#index-creation)
-   2. [B-Tree](#b-tree)
-   3. [Hash](#hash)
-   4. [GiST](#gist)
-   5. [SP-GiST](#sp-gist)
-   6. [BRIN](#brin)
-   7. [Multicolumn](#multicolumn-indexes)
-   8. [Indexes & Order by](#indexes-and-order-by)
-   9. [Index-only scan](#index-only-scan)
-5. [The Cumulative Statistics System](#the-cumulative-statistics-system)
-   1. [pg_stat_database](#pgstatdatabase)
+<!-- TOC -->
+* [Introduction](#introduction)
+* [Content](#content)
+* [Transactions](#transactions)
+  * [Phenomena](#phenomena)
+* [Scan types](#scan-types)
+  * [Sequential scan](#sequential-scan)
+  * [Index scan](#index-scan)
+  * [Index only scan](#index-only-scan)
+  * [Bitmap Heap Scan & Bitmap Index Scan](#bitmap-heap-scan--bitmap-index-scan)
+  * [Bitmap And & Bitmap Or](#bitmap-and--bitmap-or)
+  * [Parallel Scans](#parallel-scans)
+* [Join types](#join-types)
+  * [Nested loop](#nested-loop)
+  * [Merge join](#merge-join)
+  * [Hash join](#hash-join)
+* [Indexes](#indexes)
+  * [Index creation](#index-creation)
+  * [B-Tree](#b-tree)
+  * [Hash](#hash)
+  * [GiST](#gist)
+  * [SP-GiST](#sp-gist)
+  * [GIN](#gin)
+  * [BRIN](#brin)
+  * [Multicolumn indexes](#multicolumn-indexes)
+  * [Indexes and ORDER BY](#indexes-and-order-by)
+  * [Multiple indexes](#multiple-indexes)
+  * [Index-only scan](#index-only-scan-1)
+  * [Operator classes](#operator-classes)
+  * [Collate](#collate)
+* [The Cumulative Statistics System](#the-cumulative-statistics-system)
+  * [pg_stat_database](#pg_stat_database)
+* [Other](#other)
+  * [WAL](#wal)
+  * [Prepared statements](#prepared-statements)
+  * [Explain](#explain)
+  * [work_mem](#work_mem)
+* [Linked themes](#linked-themes)
+<!-- TOC -->
 
 # Transactions
 Transaction levels:
@@ -62,6 +87,11 @@ transactions one at a time.
 ## Index only scan
 
 ## Bitmap Heap Scan & Bitmap Index Scan
+BitmapIndexScan - когда выборка слишком большая, создается битовая карта страниц, на которой могут 
+располагаться интересующие записи. Потом происходит обращение к этим страницам, по RecheckCond 
+фильтруются уже требуемые записи и отдаются выше. При использовании этого типа сканирования 
+можно объединить пару индексов через логическое умножение битовых карт двух разных индексов
+
 
 ## Bitmap And & Bitmap Or
 
@@ -88,6 +118,10 @@ matching rows in the table.
 
 # Indexes
 > Indexes are more useful when only a few rows need be fetched.
+
+Индексы работают как пара ключ-значение, где ключем выступает результат работы индекса, 
+а значение - TID, tuple id, ссылка на страницу и позицию строки внутри страницы.
+
 - [Documentation](https://www.postgresql.org/docs/current/indexes.html)
 - [Documentation but more technically](https://git.postgresql.org/gitweb/?p=postgresql.git;a=tree;f=src/backend/access;hb=HEAD)
 - [(RU) Habr](https://habr.com/en/company/postgrespro/blog/326096/)
@@ -174,11 +208,40 @@ When u need to use ordering/comparison on text/varchar/etc data types and need *
 stable result (each time same sequence)  
 ***Very*** good explanation/example: [COLLATE](https://simply.name/ru/pg-lc-collate.html)
 
-## The Cumulative Statistics System
+# The Cumulative Statistics System
 - [Documentation](https://www.postgresql.org/docs/current/monitoring-stats.html)
-### pg_stat_database
+## pg_stat_database
 - [Documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#PG-STAT-DATABASE-VIEW)
 - [Deep dive into postgres stats](https://dataegret.com/2017/03/deep-dive-into-postgres-stats-pg_stat_database/)
 
-## Linked themes
+# Other
+## WAL
+WAL - write-ahead log. Нужны, чтобы писать последовательность изменений в логи быстрее, 
+чем эти изменения сбросятся на диск из буферного кэша. Впоследствии по ним, в случае падения, 
+можно восстановить консистентность данных и даже настроить репликацию
+
+## Prepared statements
+Преимущество параметров подготовленных операторов перед конкатенацией литералов со строкой 
+запроса — принципиальная невозможность внедрения SQL-кода, поскольку любое значение параметра 
+не сможет изменить уже построенное дерево разбора. Чтобы достичь того же уровня безопасности 
+без подготовленных операторов, требуется аккуратно экранировать каждое значение, полученное из 
+ненадежного источника.
+
+## Explain
+width - ширина строки (судя по всему, кол-во байт на один row). 
+Имеет вес, если значение большое и его гоняют по сети, забивая канал
+
+Q: Какова практическая ценность подготавливать запросы, кроме как защита от sql - инъекций?
+A: Сокращение времени выполнения запросов за счёт того, что часть действий происходит при подготовке. 
+Чем чаще запрос повторяется в одном сеансе, и чем запрос короче, тем сильнее эффект
+
+## work_mem
+Таким образом, часть узлов не хранит строки, а немедленно передает их выше и тут же забывает, 
+но некоторым узлам (например, сортировке) требуется сохранять потенциально большой объем данных.
+Для этого в памяти обслуживающего процесса выделяется фрагмент размером work_mem (значение по 
+умолчанию очень консервативно — 4MB); если этой памяти не хватает, данные сбрасываются на диск во 
+временный файл.
+
+
+# Linked themes
 1. [Docker](https://github.com/Regyl/KnowledgeDB/tree/master/virtual/docker)
