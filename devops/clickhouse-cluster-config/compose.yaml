@@ -1,0 +1,60 @@
+#create table idk on cluster example (id UInt32, comment String) engine=ReplicatedMergeTree('/clickhouse_perftest/tables/{shard}/idk','{replica}') ORDER BY id;
+
+#create table idk on cluster example (id UInt32, comment String) engine=MergeTree() ORDER BY id;
+
+version: '2'
+
+networks:
+  main:
+
+services:
+  clickhouse1:
+    image: 'clickhouse/clickhouse-server:22.8.6.71'
+    expose:
+      - "9010"
+      - "9000"
+    volumes:
+      - ./config_1.xml:/etc/clickhouse-server/config.xml
+    depends_on:
+      - zoo1
+    networks:
+      - main
+  clickhouse1-replica:
+    image: 'clickhouse/clickhouse-server:22.8.6.71'
+    expose:
+      - "9010"
+      - "9000"
+    volumes:
+      - ./config_1.xml:/etc/clickhouse-server/config.xml
+    depends_on:
+      - zoo1
+    networks:
+      - main
+  clickhouse2:
+    image: 'clickhouse/clickhouse-server:22.8.6.71'
+    expose:
+      - "9010"
+      - "9000"
+    volumes:
+      - ./config_1.xml:/etc/clickhouse-server/config.xml
+    depends_on:
+      - zoo1
+    networks:
+      - main
+  clickhouse2-replica:
+    image: 'clickhouse/clickhouse-server:22.8.6.71'
+    expose:
+      - "9010"
+      - "9000"
+    volumes:
+      - ./config_1.xml:/etc/clickhouse-server/config.xml
+    depends_on:
+      - zoo1
+    networks:
+      - main
+  zoo1:
+    image: zookeeper:3.7
+    container_name: zoo1
+    hostname: zoo1
+    networks:
+      - main
