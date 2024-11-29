@@ -18,4 +18,4 @@ And exactly here we firstly need _volatile_, _synchronized_, etc. Cause object c
 and second one will not see changes that did first (till first will drop changes to RAM)
 
 - [Paper](https://jenkov.com/tutorials/java-concurrency/java-memory-model.html)
-- [(RU) Habr](https://habr.com/en/articles/685518/)
+- [(RU) Habr](https://habr.com/en/articles/510454/)
