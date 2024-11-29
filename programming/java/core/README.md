@@ -1,19 +1,23 @@
 # Introduction
 
 # Content
-- [Binding](#binding)
-  - [Early](#early-binding)
-  - [Late](#late-binding)
-- [Nested classes](#Nested-classes)
-- [Unclassified](#Unclassified)
-- [Generics](#generics)
-  - [Covariance, contravariance & invariance](#covariance-contravariance--invariance)
-  - [Type erasure](#type-erasure)
-  - [Reifiable](#reifiable)
-  - [Heap pollution](#heap-pollution)
-  - [Type inference](#type-inference)
-- [Lambdas](#lambdas)
-- [Streams](#streams)
+<!-- TOC -->
+* [Introduction](#introduction)
+* [Content](#content)
+* [Binding](#binding)
+    * [Early binding](#early-binding)
+    * [Late binding](#late-binding)
+* [Nested classes](#nested-classes)
+* [Unclassified](#unclassified)
+* [Generics](#generics)
+    * [Covariance, contravariance & invariance](#covariance-contravariance--invariance)
+    * [Type erasure](#type-erasure)
+    * [Reifiable](#reifiable)
+    * [Heap pollution](#heap-pollution)
+    * [Type Inference](#type-inference)
+* [Lambdas](#lambdas)
+* [Streams](#streams)
+<!-- TOC -->
 
 # Binding
 Binding is a bind between reference and code. More precisely, between:
@@ -47,7 +51,7 @@ There are 4 types of nested classes:
     2. ![img.png](access-levels.png)
 
 # Generics
-Generic is a compilation-time future, that afford to preserve from trying 
+Generic is a compilation-time future, that afford to preserve from trying
 to use different types in one container (i.e. collection).
 - Available from Java 5
 - [Oracle](https://docs.oracle.com/javase/tutorial/java/generics/types.html)
@@ -73,13 +77,13 @@ List<? super Integer> ints = nums;
 ---
 Must underline that:
 - We cannot add elements to covariance generics
-- We cannot read elements from contravariance generics  
+- We cannot read elements from contravariance generics
 
 To remember what and when, exists thing named PECS - Producer Extends Consumer Super:  
-If we define wildcard with extends, it's producer that produce (reading) elements. Else 
+If we define wildcard with extends, it's producer that produce (reading) elements. Else
 is consumer which only consume (writing) elements.
 ## Type erasure
-During compilation happens thing named *type erasure*. To preserve 
+During compilation happens thing named *type erasure*. To preserve
 reverse compatibility with older versions of Java, compiler:
 - Replace type parameters in generic type with their bound if bounded type parameters are used:
 ```java
@@ -104,7 +108,7 @@ And CANNOT about next three. They are not reifiable:
 
 Important to note that we *CAN* get generic type thanks to reflection:
 ```java
-java.lang.reflect.Method.getGenericReturnType()
+java.lang.reflect.Method.getGenericReturnType();
 ```
 ## Heap pollution
 We can compile the code below:
@@ -127,9 +131,80 @@ We can compile code below thanks to diamond operator and type inference from con
 List<Integer> list = new ArrayList<>(); //No type in ArrayList definition
 ```
 # Lambdas
-For example:
-```java
 
-```
 # Streams
 - [(RU) Habr](https://habr.com/ru/company/luxoft/blog/270383/) - general info
+
+# NIO (New I/O)
+Works only on sockets (bidirectional permanently open connection). Partly non-blocking. Generally difference from simple blocking I/O
+is u can have only one thread to maintain multiple connections. Selector stores multiple channels and have a loop in which selector
+check it's channel collection to have a ready channel. If true, selector process all ready channels.
+
+There are 3 basic classes:
+- Buffer - analogue for a basic byte[] array.
+- Channel - open connection to a port, file, etc. bidirectional
+- Selector - thread to  manage multiple channels
+
+There are blocking, non-blocking and asynchronous channels:
+![img.png](img.png)
+
+Example implementation of non-blocking socket server on NIO
+```java
+void nio_non_blockable_selector_server() throws IOException {
+    try (ServerSocketChannel channel = ServerSocketChannel.open();
+         //Открытие селектора. Под капотом вызывается SelectorProvider, реализация которого является платформозависимой
+         Selector selector = Selector.open()) {
+        channel.socket().bind(new InetSocketAddress(9999));
+        channel.configureBlocking(false);
+        //Регистрируем серверный канал в селекторе с интересующим типом операции - принятие подключения
+        SelectionKey registeredKey = channel.register(selector, SelectionKey.OP_ACCEPT);
+
+        while (true) {
+            //Получаем количество готовых к обработке каналов.
+            int numReadyChannels = selector.select();
+            if (numReadyChannels == 0) {
+                continue;
+            }
+            //Получаем готовые к обработке каналы
+            Set<SelectionKey> selectedKeys = selector.selectedKeys();
+            Iterator<SelectionKey> keyIterator = selectedKeys.iterator();
+
+            //Обрабатываем каналы в соответствии с типом доступной каналу операции
+            while (keyIterator.hasNext()) {
+                SelectionKey key = keyIterator.next();
+
+                if (key.isAcceptable()) {
+                    //Принятие подключения серверным сокетом
+                    ServerSocketChannel server = (ServerSocketChannel) key.channel();
+                    SocketChannel client = server.accept();
+                    if (client == null) {
+                        continue;
+                    }
+                    client.configureBlocking(false);
+                    //Регистрируем принятое подключение в селекторе с интересующим типом операции - чтение
+                    client.register(selector, SelectionKey.OP_READ);
+                }
+
+                if (key.isReadable()) {
+                    //Тут происходит обработка принятых подключений
+                    SocketChannel client = (SocketChannel) key.channel();
+                    ByteBuffer requestBuffer = ByteBuffer.allocate(100);
+                    int r = client.read(requestBuffer);
+                    if (r == -1) {
+                        client.close();
+                    } else {
+                        //В этом блоке происходит обработка запроса
+                        System.out.println(new String(requestBuffer.array()));
+                        String responseMessage = "Привет от сервера! : " + client.socket().getLocalSocketAddress();
+                        //Несмотря на то, что интересующая операция, переданная в селектор - чтение, мы все равно можем писать в сокет
+                        client.write(ByteBuffer.wrap(responseMessage.getBytes()));
+                    }
+                }
+                //Удаляем ключ после обработки. Если канал снова будет доступным, его ключ снова появится в selectedKeys
+                keyIterator.remove();
+            }
+        }
+    }
+}
+```
+- [(RU) Habr](https://habr.com/en/articles/801811/) - paper
