@@ -49,8 +49,12 @@ The **objectives** are is to avoid update/insertion/deletion anomalies
 Links:
 - [Habr (RU)](https://habr.com/ru/post/254773/) - Нормализация отношений. Шесть нормальных форм
 ### 1NF
+No full row duplication in a table
 ### 2NF
+Each attribute should dependence of primary key. e.g. in table with orders first_name and last_name should be moved to separate
+table with unique key user_id and user_id should be passed to orders table
 ### 3NF
+Each column that could contains duplicate values should be moved to separate tables
 #### NFBC
 ### 4NF
 ### 5NF
