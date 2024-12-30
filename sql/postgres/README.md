@@ -43,6 +43,7 @@ Interesting but useless:
   * [Prepared statements](#prepared-statements)
   * [Explain](#explain)
   * [work_mem](#work_mem)
+  * [Cluster](#cluster)
 * [Linked themes](#linked-themes)
 <!-- TOC -->
 
@@ -220,6 +221,8 @@ WAL - write-ahead log. Нужны, чтобы писать последоват�
 чем эти изменения сбросятся на диск из буферного кэша. Впоследствии по ним, в случае падения, 
 можно восстановить консистентность данных и даже настроить репликацию
 
+- [Paper how to get WAL samples](https://habr.com/en/companies/postgrespro/articles/459250/)
+
 ## Prepared statements
 Преимущество параметров подготовленных операторов перед конкатенацией литералов со строкой 
 запроса — принципиальная невозможность внедрения SQL-кода, поскольку любое значение параметра 
@@ -242,6 +245,10 @@ A: Сокращение времени выполнения запросов з�
 умолчанию очень консервативно — 4MB); если этой памяти не хватает, данные сбрасываются на диск во 
 временный файл.
 
-
-# Linked themes
-1. [Docker](https://github.com/Regyl/KnowledgeDB/tree/master/virtual/docker)
+## Cluster
+When a table is clustered, it is physically reordered based on the index information. 
+Clustering is a one-time operation. That is, no attempt is made to store new or updated 
+rows according to their index order.
+```sql
+CLUSTER VERBOSE [ table_name [ USING index_name ] ]
+```
