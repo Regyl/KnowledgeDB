@@ -3,10 +3,12 @@
 # Content
 - [Tree](#tree)
   - [Red-Black](#red-black-tree)
+- [Heap](#heap)
 
 
-# Tree
-## Red-black tree
+## Tree
+Searching is always O(logn)
+### Red-black tree
 There are 5 properties:
 1. Root is black
 2. Every node must be red or black
@@ -15,3 +17,8 @@ There are 5 properties:
 5. Null-leafs must be black
 
 - Inserting happens in null-leaf, after what occurs a rebalancing - [(RU) Habr](https://habr.com/ru/post/330644/)
+
+## Heap
+Balanced tree
+- Min-heap the minimum element is the root
+- Max-heap the maximum element is the root
